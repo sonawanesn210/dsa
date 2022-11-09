@@ -1,4 +1,4 @@
-const promise = new Promise(function (resolve, reject) {
+/* const promise = new Promise(function (resolve, reject) {
     const string1 = "geeksforgeeks";
     const string2 = "geeksforgeeks";
     if (string1 === string2) {
@@ -42,3 +42,27 @@ const promise = new Promise(function (resolve, reject) {
       .catch(function (err) {
         console.log(err);
       });
+
+ */
+
+      const prom = new Promise(function (res,rej){
+        const s1="swap"
+        const s2 ="swap"
+        if(s1===s2){
+          setTimeout(()=>{
+            res("Same")
+          },2000)
+        }else{
+          setTimeout(()=>{
+            rej("diff")
+          },2000)
+        }
+      })
+
+
+      prom
+      .then(function(data){
+        console.log(data)
+      }).catch(function(err){
+        console.log(err)
+      })
