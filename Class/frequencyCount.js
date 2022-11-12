@@ -47,3 +47,25 @@ return maxCount
    
 }
 console.log(freqCountHas([1,2,3,3,4,2,5,5,6,5,5,5,5,5,6,5]))
+
+
+//using reduce method
+
+const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
+
+const countedNames = names.reduce((allNames,n) => {
+//const currCount = allNames[n] ?? 0;
+  let cur=0;
+  if(allNames[n]){
+    cur=allNames[n]
+  }else{
+    cur=0
+  }
+  return {
+    ...allNames,
+    [n]: cur + 1,
+  };
+}, {});
+
+console.log(countedNames)
+
