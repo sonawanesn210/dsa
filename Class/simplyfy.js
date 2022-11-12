@@ -51,3 +51,11 @@ function faltternArr(arr){
     return arr.flat()
 }
 console.log((returnObj(obj)))
+
+
+const allSkills = obj.reduce(
+    (accumulator, currentValue) => [...accumulator, ...currentValue.skills],
+    [],
+  );
+
+  console.log(allSkills);
