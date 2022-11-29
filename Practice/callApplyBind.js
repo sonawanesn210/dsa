@@ -13,6 +13,8 @@ let showdetails= function (lname,age){
 }
 showdetails.apply(person1,["s",20])
 //function borrowing
-showdetails.call(person2)
+showdetails.call(person2,"s",20)
 
 //we can pass external arguments too
+let obj =showdetails.bind(person1,"s",30)
+obj()

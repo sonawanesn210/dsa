@@ -1,5 +1,5 @@
 //  TWO POINTER METHOD =====ONLY WHILE ARRAY IS SORTED
-
+/* 
  
 // Given a sorted array of integer find whether a pair exist with a given sum
  function givenSum(arr,target){
@@ -79,3 +79,64 @@ function pairs(arr,target){
 }
 
 console.log(pairs([ 1, 2, 3, 4,6,7,8,9, 11, -2, -97, 0, -11, 20],9))
+
+
+
+function printPairs(newA, n, sum)
+{
+    let count = 0; // Initialize result
+ 
+    // Consider all possible pairs and check
+    // their sums
+    for (let i = 0; i < n; i++)
+        for (let j = i + 1; j < n; j++)
+            if (newA[i] + newA[j] == sum)
+                 console.log(newA[i],newA[j])
+}
+ 
+// Driver function to test the above function
+ 
+    let newA= [ 1, 5, 7, -1, 5 ];
+    let n = newA.length;
+    let sum = 6;
+    printPairs(newA, n, sum); */
+
+/* 
+    function pairPresent(arr,sum){
+        let count=0
+        for(let i=0;i<arr.length;i++){
+            for(let j=i+1;j<arr.length;j++){
+                if(arr[i]+arr[j]===sum){
+                    count++
+                    console.log(arr[i],arr[j])
+                }
+            }
+        }
+        console.log("count is",count);
+       
+    }
+ 
+
+  (pairPresent([ 1, 2, 3, 4,6,7,8,9, 11, -2, -97, 0, -11, 20],9)) */
+
+  function pair(arr,sum){
+    let map={}
+    for(let i=0;i<arr.length;i++){
+        let rem=sum-arr[i]
+        if(map[rem]){
+            let count =map[rem]
+            for(let j=0;j<count;j++){
+                console.log(arr[i],rem)
+            }
+
+        }
+        if(!map[arr[i]]){
+            map[arr[i]]=1
+        }else{
+            map[arr[i]]+=1
+        }
+    }
+  }
+pair([1, 2, 3, 4,6,7,8,9, 11, -2, -97, 0, -11, 20],9)
+
+  
