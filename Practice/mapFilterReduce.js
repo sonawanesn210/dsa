@@ -35,4 +35,4 @@ console.log(lengths); // Output: [5, 6, 6]
 const namess = ["Alice", "Bob", "Amy", "Alex", "Ben"];
 
 const namesStartingWithA = namess.filter((name) => name[0].toUpperCase() === 'A');
-console.log(namesStartingWithA); // Output: ["Alice", "Amy", "Alex"]
+console.log("namesStartingWithA,",namesStartingWithA); // Output: ["Alice", "Amy", "Alex"]
