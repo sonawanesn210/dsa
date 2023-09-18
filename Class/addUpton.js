@@ -7,3 +7,4 @@ function addUpTo(n){
 
 }
 console.log(addUpTo(10))
+console.log("in add")
